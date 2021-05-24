@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **Features**
 
 * xwinver.exe returns a code according to OS version, so that
-one can use it in batch files. See the code below for possible
+one can use it in batch files. See below for possible
 return values. It uses Netxxx api from lm.h, since the stuff
 from versionhelpers.h seems not to be reliable anymore.
 
@@ -33,3 +33,25 @@ from versionhelpers.h seems not to be reliable anymore.
 * Console subsystem version should be 5.0 so that it can be run 
 from win2k and up. If you make it 4.0, it would prolly run on 
 NT also, but I couldn't test.
+
+**Return Values**
+
+* 1100 - Win Server 2016
+* 1063 - Win Server 2012 R2
+* 1062 - Win Server 2012 
+* 1061 - Win Server 2008 R2
+* 1060 - Win Server 2008
+* 1052 - Win Server 2003 R2
+* 1050 - Win 2k Server
+* 1040 - Possibly NT :-)
+---------
+* 100 - Win 10
+* 63 - Win 8.1
+* 62 - Win 8.0
+* 61 - Win 7
+* 60 - Win Vista
+* 52 - Win XP x64
+* 51 - Win XP
+* 50 - Win 2k
+* 40 - Possibly NT :-)
+

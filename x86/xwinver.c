@@ -64,7 +64,7 @@ int _tmain ( int argc, _TCHAR ** argv )
                         TEXT("\t  61/1061 >= WIN 7/Srv 2008 R2\n")
                         TEXT("\t  60/1060 >= WIN Vista/Srv 2008\n")
                         TEXT("\t  52/1052 >= WIN XP x64/Srv 2003 R2\n")
-                        TEXT("\t  51/1051 >= WIN XP\n")
+                        TEXT("\t  51/1051 >= WIN XP/?\n")
                         TEXT("\t  50/1050 >= WIN 2k\n")
                         TEXT("\t  40/1040 >= Antique :-)\n\n"));
 
@@ -115,8 +115,8 @@ int _tmain ( int argc, _TCHAR ** argv )
         rVal += 1000;
 
     _ftprintf ( stdout, TEXT("\n%d\n"), rVal );
-#ifdef DEBUG
-    getchar();
-#endif
+    #ifdef DEBUG
+        getchar();
+    #endif
     return rVal;
 }

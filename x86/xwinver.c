@@ -35,7 +35,6 @@
           NT also, but I couldn't test.
 */
 
-//#define DEBUG
 #define UNICODE
 #ifdef UNICODE
     #define _UNICODE

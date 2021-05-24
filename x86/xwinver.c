@@ -90,6 +90,8 @@ int _tmain ( int argc, _TCHAR ** argv )
         dwMajor = pSvi->sv101_version_major & MAJOR_VERSION_MASK;
         dwMinor = pSvi->sv101_version_minor;
 
+        // see if we have the server version, since
+        // major.minor are the same for both types
         if ( (pSvi->sv101_type & SV_TYPE_DOMAIN_CTRL) ||
              (pSvi->sv101_type & SV_TYPE_DOMAIN_BAKCTRL) ||
              (pSvi->sv101_type & SV_TYPE_SERVER_NT) )
@@ -107,6 +109,8 @@ int _tmain ( int argc, _TCHAR ** argv )
     if ( pSvi != NULL )
         NetApiBufferFree ( pSvi );
 
+    // make it so we can differentiate between client
+    // and server versions
     if ( isServer )
         rVal += 1000;
 

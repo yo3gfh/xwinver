@@ -1,4 +1,4 @@
-﻿/*
+/*
     XWINVER, windows version detector :-)
     ------------------------------------------------
     Copyright (c) 2020-2021 Adrian Petrila, YO3GFH
@@ -39,7 +39,7 @@
 #ifdef UNICODE
     #define _UNICODE
 #endif
-
+//#define DEBUG
 #include <windows.h>
 #include <lm.h>
 #include <tchar.h>
@@ -55,7 +55,7 @@ int _tmain ( int argc, _TCHAR ** argv )
 
     _ftprintf (stderr,  TEXT("\nxWinVer v1.0 - copyright (c) 2020-2021") 
                         TEXT(" Adrian Petrila, YO3GFH\n\n")
-                        TEXT("This program returns a value which you")
+                        TEXT("This program returns a value that you")
                         TEXT(" can use in batch files to identify what\n")
                         TEXT("OS you're on. Possible values are:\n")
                         TEXT("\t 100/1100 >= WIN 10/Srv 2016\n")
